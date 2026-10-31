@@ -1,0 +1,28 @@
+Revision history for Game-Oware
+
+0.04    2026-10-13
+	- u and r, undo and redo, take back a turn and play it again
+	- Add options, the fields a launcher offers before a game
+	- The keys, the screen and the picker are Game::Terminal::Kit's
+	- Requires perl 5.14
+	- The moves in the picker are numbered
+	- The picker is drawn over the last frame, with no clear between
+	- to_text and from_text carry the variant, the first seat, the starting board, the seed, and a resignation, timeout or abandonment
+	- Shift-tab moves the cursor back
+	- Remove read_char, read_sequence and recent; add keyboard, screen,
+	  log, last_move and picker
+
+0.03    2026-10-11
+	- Add Game::Oware::Terminal->run(@argv), which returns the exit status
+
+0.02    2026-10-07
+	- Pick a move with the arrow keys in the terminal, previewing the
+	  position the move would produce.
+	- The terminal board is drawn as a board: a store at each end, seed
+	  clusters, colour, and a mark on every house the last move touched.
+	- Fix: --ascii was a second glyph table identical to the first.
+	- Fix: --quiet swallowed the result.
+	- Fix: a command answered on the prompt's own line off a terminal.
+
+0.01    2026-09-18
+	First version
